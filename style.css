@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    margin: 0px;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #CAF0F8;
+}
+
+:root {
+    --cell-size: 120px;
+}
+
+/* START MESSAGE */
+
+.startGameMessage {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0px;
+
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+
+    height: 100vh;
+    width: 100vw;
+
+    background-color: #CAF0F8;
+}
+
+.startGameMessage > h1 {
+    color: #03045E;
+    font-weight: bold;
+    font-size: 70px;
+}
+
+.startGameMessage > p {
+    color: #0096C7;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.startGameMessage > button {
+    padding: 25px 50px;
+    border-radius: 10px;
+    background-color: #CAF0F8;
+    border: 3px solid grey;
+    font-size: 30px;
+    color: grey;
+    font-weight: bold;
+}
+
+.startGameMessage > button:hover {
+    color: white;
+    background-color: grey;
+}
+
+/* BOARD */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+    justify-content: center;
+    align-content: center;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: var(--cell-size);
+    width: var(--cell-size);
+
+    border: 3px solid grey;
+    padding: 20px;
+    font-size: 50px;
+}
+
+.cell:nth-child(3n + 1) {
+    border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+    border-right: none;
+}
+
+.cell:nth-child(1),
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(7),
+.cell:nth-child(8),
+.cell:nth-child(9) {
+    border-bottom: none;
+}
+
+/* MAIN DETAILS */
+
+.endMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60px;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.gameButtons {
+    display: flex;
+    gap: 20px;
+}
+
+.gameButtons > button {
+    border: 3px solid grey;
+    background-color: #CAF0F8;
+    width: 150px;
+    height: 70px;
+    border-radius: 20px;
+    font-size: 25px;
+    color: grey;
+}
+
+.gameButtons > button:hover {
+    color: white;
+    background-color: grey;
+}
+
+/* FOOTER */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    position: absolute;
+
+    bottom: 10px;
+    right: 10px;
+}
+
+.footer > p {
+    font-size: 20px;
+    align-self: center;
+}
+
+.footer > a {
+    align-self: center;
+}
